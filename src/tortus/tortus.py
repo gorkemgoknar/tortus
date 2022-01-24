@@ -131,7 +131,7 @@ class Tortus:
         html = '<h4>' + text + '</h4>'
         return html
 
-    def annotate(self):
+    def annotate(self, flex_flow="column"):
         '''Displays texts to be annotated in a UI. Loads user inputted labels and timestamps into
             ``annotations`` dataframe.
         '''
@@ -194,7 +194,7 @@ class Tortus:
 
         box_layout = Layout(
             display='flex',
-            flex_flow='row',
+            flex_flow=flex_flow, #parametrized "row" for old behaviour
             align_items='stretch',
             width='100%'
         )
